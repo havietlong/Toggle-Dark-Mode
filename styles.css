@@ -1,0 +1,52 @@
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+}
+
+input {
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.slider::after {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider::after {
+  transform: translateX(26px);
+}
+
+.dark-mode {
+  background-color: black;
+  transition: 0.4s;
+}
+
+.light-mode {
+  background-color: white;
+  transition: 0.4s;
+}/*# sourceMappingURL=styles.css.map */
